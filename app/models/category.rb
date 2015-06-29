@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  validates :name, :presence => true
   has_many :businesses
+  validates :name, :presence => true
 end

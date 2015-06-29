@@ -1,0 +1,26 @@
+<h3>New Business</h3>
+
+<%= form_for [@category, @business] do |f| %>
+  <div class="form-group">
+    <%= f.label 'Name' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Address' %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Website' %>
+    <%= f.text_field :website %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Phone Number 1' %>
+    <%= f.text_field :phones %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Hours' %>
+    <%= f.text_field :hours %>
+  </div>
+  <%= f.submit :class => 'btn btn-info' %>
+<% end %>

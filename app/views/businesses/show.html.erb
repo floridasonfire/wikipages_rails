@@ -1,1 +1,9 @@
 <h1><%= @business.name %></h1>
+
+<h4><%= @business.address %></h4>
+<h4><%= @business.website %></h4>
+<h4><%= @business.phones %></h4>
+<% @business.phones.each do |phone| %>
+  <h4><%= phone %></h4>
+<% end %>
+<h4><%= @business.hours %></h4>

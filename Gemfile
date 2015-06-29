@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'

@@ -2,7 +2,7 @@
 
 <ul class="list-unstyled">
   <% @categories.each do |category| %>
-    <li><%= category.name %></li>
+    <li><%= link_to category.name, category_path(category) %></li>
   <% end %>
 </ul>
 

@@ -1,4 +1,4 @@
-<h3>New Business</h3>
+<h3>Edit <%=@business.name%></h3><br />
 
 <%= form_for [@category, @business] do |f| %>
   <div class="form-group">
@@ -14,17 +14,6 @@
   <div class="form-group">
     <%= f.label 'Website' %>
     <%= f.text_field :website %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label 'Phone Number 1' %>
-    <input type="textbox" name="[phones][]" />
-
-  </div>
-
-  <div class="form-group">
-    <%= f.label 'Phone Number 2' %>
-    <input type="textbox" name="[phones][]" />
   </div>
 
   <div class="form-group">

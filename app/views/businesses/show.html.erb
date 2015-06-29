@@ -9,4 +9,5 @@
 <h3>Hours:</h3> <h4><%= @business.hours %></h4>
 
 <%= link_to 'Delete', category_business_path( @category, @business),
-                       :data => {:method => 'delete', :confirm => 'Are you sure you want to delete?'} %>
+                       :data => {:method => 'delete', :confirm => 'Are you sure you want to delete?'} %> |
+<%= link_to 'Edit', edit_category_business_path(@category, @business) %>

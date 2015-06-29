@@ -21,6 +21,19 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find(params[:category_id])
+    @business = Business.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:category_id])
+    @business = Business.find(params[:id])
+    @business.update(business_params)
+    @business.phones = params[:phones]
+    redirect_to category_business_path(@category, @business)
+  end
+
   def destroy
     @category = Category.find(params[:category_id])
     @business = Business.find(params[:id])

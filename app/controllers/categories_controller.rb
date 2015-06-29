@@ -15,6 +15,9 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
+    @category.businesses.each do |business|
+      business.destroy
+    end
     @category.destroy()
     redirect_to categories_path
   end
